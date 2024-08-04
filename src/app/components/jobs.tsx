@@ -11,7 +11,7 @@ export default function Jobs({header,jobs}:{header:string,jobs:Job[]}){
                         <div>No jobs found</div>
                     )}
                 { jobs && (jobs.map(jobs=>(
-                        <Jobrow   jobDoc={jobs} />)
+                        <Jobrow  key={jobs._id} jobDoc={jobs} />)
                       ))
                 }
            
